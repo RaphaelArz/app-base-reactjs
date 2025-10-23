@@ -1,0 +1,22 @@
+name: build-app
+
+on: push
+
+jobs:
+  build-app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install-package
+        run: npm install
+
+      - name: build-app 
+        run: npm run build
+
+  start-app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: start-app
+        run: npm start
+
+      - name: test-curl
+        run: curl http://localhost:3000

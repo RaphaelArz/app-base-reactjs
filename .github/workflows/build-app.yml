@@ -22,7 +22,7 @@ jobs:
         run: npm run build
 
       - name: start-app
-        run: npm start
+        run: npm start &
 
       - name: test-curl
         run: curl http://localhost:3000
